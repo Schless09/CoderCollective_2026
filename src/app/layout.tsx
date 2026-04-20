@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#111827",
+};
+
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -37,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} overflow-x-hidden antialiased`}>
         <div className="flex min-h-screen flex-col bg-gray-900">
           <Header />
           <main className="w-full flex-grow">{children}</main>

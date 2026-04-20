@@ -19,12 +19,14 @@ export function CompareCallout({
     <div
       className={`rounded-r-lg border-l-4 py-4 pl-5 pr-4 shadow-sm ${box}`}
     >
-      <p className={`text-sm leading-relaxed italic sm:text-base ${variant === "light" ? "text-slate-700" : "text-gray-300"}`}>
+      <p
+        className={`break-words text-sm leading-relaxed italic sm:text-base ${variant === "light" ? "text-slate-700" : "text-gray-300"}`}
+      >
         <span className="font-semibold not-italic">Instead of:</span>{" "}
         &ldquo;{instead}&rdquo;
       </p>
       <p
-        className={`mt-3 text-sm leading-relaxed italic sm:text-base ${variant === "light" ? "text-slate-900" : "text-white"}`}
+        className={`mt-3 break-words text-sm leading-relaxed italic sm:text-base ${variant === "light" ? "text-slate-900" : "text-white"}`}
       >
         <span className="font-semibold not-italic">Try:</span> &ldquo;{tryText}
         &rdquo;

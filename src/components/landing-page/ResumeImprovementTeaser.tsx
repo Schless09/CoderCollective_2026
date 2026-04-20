@@ -53,7 +53,7 @@ export default function ResumeImprovementTeaser() {
           </p>
           <Link
             href="/blog/resume-improvement"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-purple-600 hover:to-blue-600 hover:shadow-purple-500/30"
+            className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-purple-600 hover:to-blue-600 hover:shadow-purple-500/30 touch-manipulation active:opacity-90 sm:w-auto sm:justify-start"
           >
             Read the full guide
             <ArrowRight className="h-4 w-4" />

@@ -21,7 +21,7 @@ const RESUME_TEMPLATE_URL =
 
 export default function ResumeImprovementBlogPage() {
   return (
-    <article className="min-h-screen bg-slate-50 pb-20 pt-24 text-slate-900 sm:pt-28">
+    <article className="min-h-screen bg-slate-50 pb-20 pt-28 text-slate-900 sm:pt-32">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-wide text-purple-600">
           Career Development

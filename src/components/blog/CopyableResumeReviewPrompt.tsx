@@ -39,11 +39,11 @@ export function CopyableResumeReviewPrompt() {
   const failed = status === "error";
 
   return (
-    <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-inner">
+    <div className="relative max-w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-inner">
       <button
         type="button"
         onClick={copy}
-        className="absolute right-2 top-2 z-10 rounded-lg p-2.5 text-slate-500 transition hover:bg-white/90 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500"
+        className="absolute right-1 top-1 z-10 inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white/90 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 touch-manipulation sm:right-2 sm:top-2"
         aria-label={
           copied
             ? "Prompt copied"
@@ -58,7 +58,7 @@ export function CopyableResumeReviewPrompt() {
           <Copy className="h-5 w-5" aria-hidden />
         )}
       </button>
-      <pre className="max-h-[min(70vh,520px)] overflow-auto p-4 pr-14 pt-4 text-xs leading-relaxed text-slate-800 sm:text-sm whitespace-pre-wrap">
+      <pre className="max-h-[min(70vh,520px)] overflow-auto overscroll-contain p-4 pr-14 pt-4 text-xs leading-relaxed text-slate-800 [overflow-wrap:anywhere] sm:text-sm sm:pr-16 whitespace-pre-wrap">
         {RESUME_REVIEW_PROMPT}
       </pre>
       <p className="sr-only" role="status" aria-live="polite">

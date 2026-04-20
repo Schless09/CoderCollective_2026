@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-4 py-8 text-white sm:px-6">
-      <div className="container mx-auto flex items-start justify-between gap-6">
-        <div className="flex min-w-0 flex-1 flex-col items-center text-center">
-          <Link href="/" className="flex items-center">
+    <footer className="bg-black px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] text-white sm:px-6">
+      <div className="container mx-auto flex items-center justify-between gap-4 sm:gap-6">
+        <div className="flex min-w-0 flex-1 flex-col items-center text-center sm:items-start sm:text-left">
+          <Link href="/" className="flex max-w-full items-center">
             <Image
               src="/images/CC-new.svg"
               alt="Coder Collective Logo"
@@ -15,7 +15,7 @@ const Footer = () => {
               height={50}
               className="rounded-lg"
             />
-            <span className="ml-3 text-xl font-semibold">
+            <span className="ml-3 truncate text-lg font-semibold sm:text-xl">
               Coder Collective
             </span>
           </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
           href="https://www.linkedin.com/company/the-coder-collective"
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 rounded-lg p-2 text-gray-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-gray-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white touch-manipulation active:opacity-80"
           aria-label="Coder Collective on LinkedIn"
         >
           <Linkedin className="h-6 w-6" aria-hidden />

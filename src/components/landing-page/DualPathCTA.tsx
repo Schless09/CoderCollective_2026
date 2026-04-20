@@ -62,7 +62,7 @@ const DualPathCTA = () => {
                 className="block"
               >
                 <span className="inline-flex w-full items-center justify-center group">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:from-purple-600 hover:to-blue-600 hover:shadow-xl hover:shadow-purple-500/40">
+                  <span className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:from-purple-600 hover:to-blue-600 hover:shadow-xl hover:shadow-purple-500/40 touch-manipulation active:opacity-90 sm:min-h-0 sm:w-auto">
                     Schedule Now
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
@@ -95,7 +95,7 @@ const DualPathCTA = () => {
                 className="block"
               >
                 <span className="inline-flex w-full items-center justify-center group">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:from-purple-600 hover:to-blue-600 hover:shadow-xl hover:shadow-purple-500/40">
+                  <span className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:from-purple-600 hover:to-blue-600 hover:shadow-xl hover:shadow-purple-500/40 touch-manipulation active:opacity-90 sm:min-h-0 sm:w-auto">
                     Let&apos;s Talk
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>

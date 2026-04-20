@@ -25,24 +25,29 @@ const Header = () => {
     : "bg-transparent py-6";
 
   return (
-    <header className={`fixed z-50 w-full transition-all duration-300 ${shell}`}>
-      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-8">
-        <Link href="/" className="flex items-center gap-3">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 w-full pt-[env(safe-area-inset-top,0px)] transition-all duration-300 ${shell}`}
+    >
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          className="flex min-w-0 max-w-[min(100%,calc(100vw-5rem))] items-center gap-2 sm:gap-3"
+        >
           <Image
             src="/images/CC-new.svg"
             alt="Coder Collective Logo"
             width={50}
             height={50}
-            className="rounded-lg"
+            className="h-10 w-10 shrink-0 rounded-lg sm:h-[50px] sm:w-[50px]"
           />
-          <span className="text-2xl font-bold text-white transition-colors hover:text-white/80">
+          <span className="truncate text-lg font-bold text-white transition-colors hover:text-white/80 sm:text-xl md:text-2xl">
             Coder Collective
           </span>
         </Link>
         {isBlog ? (
           <Link
             href="/"
-            className="text-sm font-semibold text-white/80 transition-colors hover:text-purple-400"
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-lg px-2 text-sm font-semibold text-white/80 transition-colors hover:text-purple-400 active:text-purple-300"
           >
             Home
           </Link>

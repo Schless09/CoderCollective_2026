@@ -155,23 +155,14 @@ const Terminal = () => {
   };
 
   return (
-    <div className="h-full w-full overflow-hidden rounded-2xl border border-gray-700 bg-gray-900 shadow-2xl">
-      <div className="flex items-center gap-2 border-b border-gray-700 bg-gray-800 px-4 py-3">
+    <div className="h-full w-full max-w-full overflow-hidden rounded-xl border border-gray-700 bg-gray-900 shadow-2xl sm:rounded-2xl">
+      <div className="flex items-center gap-2 border-b border-gray-700 bg-gray-800 px-3 py-2.5 sm:px-4 sm:py-3">
         <div className="flex flex-shrink-0 items-center gap-2">
           <div className="h-3 w-3 rounded-full bg-red-500" />
           <div className="h-3 w-3 rounded-full bg-yellow-500" />
-          <div
-            className="h-3 w-3 rounded-full"
-            style={{
-              backgroundColor: "#22c55e",
-              display: "block",
-              visibility: "visible",
-              opacity: "1",
-            }}
-          />
           <div className="h-3 w-3 rounded-full bg-green-500" />
         </div>
-        <div className="ml-6 flex min-w-0 flex-1 items-center gap-2">
+        <div className="ml-4 flex min-w-0 flex-1 items-center gap-2 sm:ml-6">
           <div className="h-2 w-2 flex-shrink-0 animate-pulse rounded-full bg-green-500" />
           <span
             className="truncate text-xs text-gray-400"
@@ -186,16 +177,20 @@ const Terminal = () => {
       </div>
 
       <div
-        className="h-[500px] overflow-y-auto p-6 text-sm"
+        className="h-[min(52vh,420px)] overflow-y-auto overscroll-contain p-4 text-xs sm:h-[500px] sm:p-6 sm:text-sm"
         style={{
           fontFamily: "'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace",
         }}
       >
         <div className="space-y-1">
           {displayedLines.map((line, index) => (
-            <div key={index} className="flex items-start">
-              <span className="mr-2 text-white/60">{getPrompt(line.type)}</span>
-              <span className={getLineColor(line.type)}>{line.text}</span>
+            <div key={index} className="flex min-w-0 items-start">
+              <span className="mr-2 shrink-0 text-white/60">{getPrompt(line.type)}</span>
+              <span
+                className={`min-w-0 break-words ${getLineColor(line.type)}`}
+              >
+                {line.text}
+              </span>
               {index === displayedLines.length - 1 &&
                 isTyping &&
                 !line.complete && (
